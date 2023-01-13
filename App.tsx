@@ -1,9 +1,9 @@
 import "react-native-gesture-handler";
 import { useCallback } from "react";
 import { View } from "react-native";
-import Welcome from "./screens/Welcome";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
+import RootStack from "./navigators/RootStack";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,7 +24,7 @@ export default function App() {
   }
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
-      <Welcome />
+      <RootStack />
     </View>
   );
 }
