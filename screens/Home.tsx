@@ -11,6 +11,8 @@ import SendMoneySection from "../components/SendMoney/SendMoneySection";
 import portrait1 from "../assets/portraits/p1.jpg";
 import portrait2 from "../assets/portraits/p2.jpg";
 import portrait3 from "../assets/portraits/p3.jpg";
+import { StackScreenProps } from "@react-navigation/stack";
+import { RootStackParamList } from "../navigators/RootStack";
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.graylight};
@@ -18,7 +20,9 @@ const HomeContainer = styled(Container)`
   flex: 1;
 `;
 
-const Home: FunctionComponent = () => {
+export type Props = StackScreenProps<RootStackParamList, "Home">;
+
+const Home: FunctionComponent<Props> = () => {
   const cardsData = [
     {
       id: 1,
