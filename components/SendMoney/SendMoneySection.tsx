@@ -1,7 +1,7 @@
 import { FunctionComponent, useRef } from "react";
 import styled from "styled-components/native";
 import { SendMoneySectionProps } from "./types";
-import BottomSheet from "react-native-bottomsheet-reanimated";
+import BottomSheet from "reanimated-bottom-sheet";
 import { colors } from "../colors";
 import RegularText from "../Texts/RegularText";
 import SmallText from "../Texts/SmallText";
@@ -69,10 +69,10 @@ const SendMoneySection: FunctionComponent<SendMoneySectionProps> = (props) => {
     <BottomSheet
       ref={sheetRef}
       snapPoints={[240, 85]}
-      containerStyle={{ borderRadius: 25 }}
-      initialPosition={1}
-      dragEnabled={false}
-      body={renderContent}
+      initialSnap={1}
+      borderRadius={25}
+      enabledContentTapInteraction={false}
+      renderContent={renderContent}
     />
   );
 };

@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components/native";
 import { colors } from "../components/colors";
 import { Container } from "../components/shared";
